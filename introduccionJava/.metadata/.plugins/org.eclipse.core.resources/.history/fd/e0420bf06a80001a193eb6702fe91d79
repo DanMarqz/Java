@@ -1,0 +1,23 @@
+package entidadBancos;
+
+public class BBV extends Bancos{
+	public int obtenerTipoInteres(){
+		return 7;
+	}
+}
+
+public class Santander extends Bancos{
+	public int obtenerTipoInteres(){
+		return 8;
+	}
+}
+
+public class ComprobarInteres{
+	public static void main(String args[]){
+		Bancos b;
+		b = new BBV();
+		System.out.println("Tarifa del interés es:" + b.obtenerTipoInteres() + "%");
+		b = new Santander();
+		System.out.println("Tarifa del interés es:" + b.obtenerTipoInteres() + "%");
+	}
+}
